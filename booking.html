@@ -10,8 +10,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/2.9.1/parse.js"></script>
     <script src="assets/js/parseInit.js"></script>
     <script>
-            function saveData(){
             var currentUser = Parse.User.current();
+            function saveData(){
             if (currentUser) {
                 // do stuff with the user
                 const MyCustomClass = Parse.Object.extend('MyCustomClassName');
@@ -97,7 +97,7 @@
                     <label for="dtime">Select a Drop Time</label>
                     <input type="time" class="form-control" id="dtime">
                 </div>
-                <button class="btn btn-primary" onclick="saveData()">Submit</button>
+                <button type="button" class="btn btn-primary" onclick="saveData()">Submit</button>
             </form>
         </div>
     
