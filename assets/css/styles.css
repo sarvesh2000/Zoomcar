@@ -1,0 +1,12 @@
+.jumbotron-fluid{
+    background-image: url("../imgs/car.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+}
+.jumbotron-fluid div{
+    margin-top: 30rem;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
