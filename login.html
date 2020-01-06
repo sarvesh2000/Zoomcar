@@ -14,7 +14,7 @@
            // Pass the username and password to logIn function
             Parse.User.logIn(document.getElementById("email").value,document.getElementById("password").value).then((user) => {
             // Do stuff after successful login
-            if (typeof document !== 'undefined') document.write(`Logged in user: ${JSON.stringify(user)}`);
+            if (typeof document !== 'undefined') document.location.href="index.html"//document.write(`Logged in user: ${JSON.stringify(user)}`);
             console.log('Logged in user', user);
             alert("Logged in");
             }).catch(error => {
