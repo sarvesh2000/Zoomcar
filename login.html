@@ -12,10 +12,11 @@
    <script>
        function login(){
            // Pass the username and password to logIn function
-            Parse.User.logIn("newUserName","#Password123").then((user) => {
+            Parse.User.logIn(document.getElementById("email").value,document.getElementById("password").value).then((user) => {
             // Do stuff after successful login
             if (typeof document !== 'undefined') document.write(`Logged in user: ${JSON.stringify(user)}`);
             console.log('Logged in user', user);
+            alert("Logged in");
             }).catch(error => {
             if (typeof document !== 'undefined') document.write(`Error while logging in user: ${JSON.stringify(error)}`);
             console.error('Error while logging in user', error);
