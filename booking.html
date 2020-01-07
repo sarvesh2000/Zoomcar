@@ -14,11 +14,15 @@
             function saveData(){
             if (currentUser) {
                 // do stuff with the user
-                const MyCustomClass = Parse.Object.extend('MyCustomClassName');
+                const MyCustomClass = Parse.Object.extend('Booking');
                 const myNewObject = new MyCustomClass();
         
-                myNewObject.set('myCustomKey1Name', 'myCustomKey1Value');
-                myNewObject.set('myCustomKey2Name', 'myCustomKey2Value');
+                myNewObject.set('username', currentUser.getUsername());
+                myNewObject.set('pickupPoint', document.getElementById("ppoint").value);
+                myNewObject.set('pickupDate',document.getElementById('pdate').value);
+                myNewObject.set('dropDate',document.getElementById('ddate').value);
+                myNewObject.set('dropTime',document.getElementById('dtime').value);
+                
         
                 myNewObject.save().then(
                 (result) => {
