@@ -10,6 +10,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/2.9.1/parse.js"></script>
     <script src="assets/js/parseInit.js"></script>
     <script>
+        var span= document.getElementById('price');
+        var car= document.getElementById('car').nodeValue;
+        if(car=="Hyundai Verna"){
+            span.innerHTML="Rs.500";
+        }else if(car=="Ford Focus"){
+            span.innerHTML="Rs.300";
+        }else{
+            span.innerHTML="Rs.1000";
+        }
+    </script>
+    <script>
             var currentUser = Parse.User.current();
             function saveData(){
             if (currentUser) {
@@ -109,7 +120,7 @@
                 </div>
                 <div class="form-group">
                     <label for="car">Select a car</label>
-                    <select class="form-control" id="car">
+                    <select class="form-control" id="car" onchange="">
                         <option value="Hyundai Verna">Hyundai Verna</option>
                         <option value="Ford Focus">Ford Focus</option>
                         <option value="Mahindra XUV">Mahindra XUV</option>
