@@ -15,7 +15,7 @@
             if (currentUser) {
                 // do stuff with the user
                 const Booking = Parse.Object.extend('Booking');
-                const myNewObject = new MyCustomClass();
+                const myNewObject = new Booking();
         
                 myNewObject.set('username', currentUser.getUsername());
                 myNewObject.set('pickupPoint', document.getElementById("ppoint").value);
