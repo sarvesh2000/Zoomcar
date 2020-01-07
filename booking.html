@@ -17,8 +17,11 @@
                 span.innerHTML="Rs.500";
             }else if(car=="Ford Focus"){
                 span.innerHTML="Rs.300";
-            }else{
-                span.innerHTML="Rs.1000";
+            }else if(car=="Mahindra XUV"){
+                span.innerHTML="Rs. 1000"
+            }
+            else{
+                span.innerHTML="";
             }
         }
     </script>
@@ -123,6 +126,7 @@
                 <div class="form-group">
                     <label for="car">Select a car</label>
                     <select class="form-control" id="car" onchange="price()">
+                        <option>...</option>
                         <option value="Hyundai Verna">Hyundai Verna</option>
                         <option value="Ford Focus">Ford Focus</option>
                         <option value="Mahindra XUV">Mahindra XUV</option>
