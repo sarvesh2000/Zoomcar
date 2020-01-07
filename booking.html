@@ -22,8 +22,10 @@
         
                 myNewObject.save().then(
                 (result) => {
-                    if (typeof document !== 'undefined') document.write(`ParseObject created: ${JSON.stringify(result)}`);
+                    if (typeof document !== 'undefined'){ //document.write(`ParseObject created: ${JSON.stringify(result)}`);
                     console.log('ParseObject created', result);
+                    document.location.href="confirm.html"
+                    }
                 },
                 (error) => {
                     if (typeof document !== 'undefined') document.write(`Error while creating ParseObject: ${JSON.stringify(error)}`);
