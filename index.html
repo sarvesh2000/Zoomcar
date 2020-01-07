@@ -19,6 +19,7 @@
         if(!currentUser){
           document.getElementById('logout').style.display = "none";
         }else{
+          document.getElementById('logout').style.display = "inline";
           Parse.user.logOut();
           document.location.href="index.html";
         }
