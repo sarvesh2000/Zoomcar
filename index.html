@@ -13,6 +13,18 @@
     <!--Custom CSS-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
+    <script>
+      var currentUser= Parse.user.current();
+      function logout(){
+        if(!currentUser){
+          document.getElementById('logout').style.display = "none";
+        }else{
+          Parse.user.logOut();
+          document.location.href="index.html";
+        }
+      }
+    </script>
+
     <title>Zoomcar | Self Drive Rental Cars</title>
 </head>
 <body>
@@ -37,6 +49,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="signup.html">SignUp</a>
                 </li>
+                <li class="nav-item" id="logout" onclick="logout()">
+                  <button class="btn btn-danger" type="button">Log Out</button>
+                </li>
               </ul>
             </div>
           </nav>
@@ -45,7 +60,7 @@
           <div class="jumbotron jumbotron-fluid">
                 <div class="container">
                     <h3 class="display-3">TAKE A ZOOMCAR NOW</h3>
-                    <a class="btn btn-light" href="booking.html">START BOOKING</a>
+                    <a class="btn btn-success" href="booking.html">START BOOKING</a>
                 </div>
           </div>
 
