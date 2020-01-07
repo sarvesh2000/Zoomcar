@@ -23,13 +23,14 @@
                 myNewObject.set('pickupTime',document.getElementById('ptime').value);
                 myNewObject.set('dropDate',document.getElementById('ddate').value);
                 myNewObject.set('dropTime',document.getElementById('dtime').value);
+                myNewObject.set('car',document.getElementById('car').value);
                 
         
                 myNewObject.save().then(
                 (result) => {
                     if (typeof document !== 'undefined'){ //document.write(`ParseObject created: ${JSON.stringify(result)}`);
                     console.log('ParseObject created', result);
-                    document.location.href="index.html";
+                    document.location.href="confirm.html";
                     }
                 },
                 (error) => {
@@ -104,6 +105,14 @@
                 <div class="form-group">
                     <label for="dtime">Select a Drop Time</label>
                     <input type="time" class="form-control" id="dtime">
+                </div>
+                <div class="form-group">
+                    <label for="car">Select a car</label>
+                    <select class="form-control" id="car">
+                        <option value="Hyundai Verna">Hyundai Verna</option>
+                        <option value="Ford Focus">Ford Focus</option>
+                        <option value="Mahindra XUV">Mahindra XUV</option>
+                    </select>
                 </div>
                 <button type="button" class="btn btn-primary" onclick="saveData()">Submit</button>
             </form>
