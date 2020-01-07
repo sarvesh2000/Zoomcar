@@ -20,6 +20,7 @@
                 myNewObject.set('username', currentUser.getUsername());
                 myNewObject.set('pickupPoint', document.getElementById("ppoint").value);
                 myNewObject.set('pickupDate',document.getElementById('pdate').value);
+                myNewObject.set('pickupTime',document.getElementById('ptime').value);
                 myNewObject.set('dropDate',document.getElementById('ddate').value);
                 myNewObject.set('dropTime',document.getElementById('dtime').value);
                 
@@ -28,7 +29,7 @@
                 (result) => {
                     if (typeof document !== 'undefined'){ //document.write(`ParseObject created: ${JSON.stringify(result)}`);
                     console.log('ParseObject created', result);
-                    document.location.href="confirm.html";
+                    document.location.href="index.html";
                     }
                 },
                 (error) => {
